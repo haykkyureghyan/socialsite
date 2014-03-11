@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jewgether</title>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link type="text/css" href="assets/css/jquery.formstyler.css" rel="stylesheet">
+	<link href="assets/css/style.css" rel="stylesheet">
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/3.1.0/css/jasny-bootstrap.min.css">
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+	<link href="assets/css/bootstrap-social.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    
+   	<script src="assets/js/jquery.formstyler.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/3.1.0/js/jasny-bootstrap.min.js"></script>
+	<script src="assets/js/jquery.lettering.js"></script>
+	<script>
+  	$(document).ready(function() {
+		// close - open part
+		$(".btn_choose_occup").click(function() {
+			  $(".find-style").show();
+		});		
+	    $(".close-btn").click(function() {
+			  $(".find-style").hide();
+		});
+		// tooltip
+		$(".glyphicon-question-sign").tooltip();
+		// letters	
+	    $(".letters  h3").lettering();
+	    //datapicker jqery ui
+	    var pickerOpts = {	dateFormat:"  d  MM  yy  " };	
+	    $( ".datepicker" ).datepicker(pickerOpts);
+	    $( ".datemake").click(function() {
+		  $( ".datepicker" ).datepicker('show');
+		});
+		// file input jasny-bootstrap
+		$(".fileinput").fileinput();
+		
+		// jquery form styler 
+		$(function() {
+			$('.signup_radio, .remember_me').styler();
+		})		
+   	});
+    </script>
+
+
+  </head>
+  <body>
+  <div class="container static">
+  <header>
+      <div class="row" >
+      	 <a href="#" >
+          <div class="col-xs-3 leftheader" >                  
+          </div>
+          </a> 
+          <div class="col-xs-6" >
+          </div>
+          <div class="col-xs-3 rightheader">
+          	<div >	
+				<a data-toggle="modal" href="#myModal2">
+					<img src="assets/img/login_key.png" alt="Log In"><span id="login">Log In</span>
+				</a>     
+					<button type="button" class="btn btn-sm btn-ttc" data-toggle="modal" href="#myModal"><strong>Sign Up Now!</strong></button>
+              </div>
+          </div>	  
+      </div><!--row-->
+  </header>
+	 <!--middle_part-->
+
+	<div class="row">
+      		<div class="col-xs-12 slogan" id="slogan">
+            	<h1>Jewgether helps you stay over, travel and hang out with <br/>
+					<span class="slogan_green_part">thousands of jews</span> from all over the world </h1>
+					
+				<div class="icon-text-1">Rebecca is hanging out with Rachel<span>Maor Staying at Alex’s</span></div>
+				<div class="icon-text-2">The Berger’s are travelling with the Levi’s</div>
+				<div>What are you looking for?</div>
+            </div>
+	</div>
+	<!--middle_part-->
+	<!--row-->
+                <div class="row looking_for" id="looking_for">
+    
+                    <div class="choose_occup" id="choose_occup">
+                        <div class="col-xs-2 col-xs-offset-3 occup_stay" id="occup_stay">
+                            <button type="button" class="btn btn-sm btn_choose_occup btn_shadow" id="btn_stay">
+                            	<h4>Stay</h4>
+                            </button>
+                        </div>
+                        <div class="col-xs-2 occup_travel" id="occup_travel">
+                            <button type="button" class="btn btn-sm btn_choose_occup btn_shadow " id="btn_travel">
+                            	<h4>Travel</h4>
+                            </button>
+                        </div>
+                        <div class="col-xs-2 occup_hang_out" id="occup_hang_out">
+                            <button type="button" class="btn btn-sm btn_choose_occup btn_shadow" id="btn_hang_out">
+                            	<h4>Hang out</h4>
+                            </button>
+                        </div>
+                    </div> 
+  
+            </div>
+	          
+<!--find a pla to stay-->
+    <div class="row find-style">
+		<div class="col-xs-6 col-xs-offset-3 place_to_stay">
+		<h1 class="text-center">Find a place to stay</h1>
+			<form  role="form">
+				<div class="row">
+					<div class="form-group col-xs-8">
+						<label for="exampleInputEmail1">Location</label>
+						<input type="email" class="form-control search_occup" id="exampleInputEmail1" placeholder="">
+					</div>
+					<div class="form-group col-xs-4">
+						<label for="exampleInputPassword1">Guests</label>
+						<input type="password" class="form-control search_occup" id="exampleInputPassword1" placeholder="">
+					</div>
+				</div>
+				<div class="row" >
+					<div class="form-group col-xs-4">
+						<label for="exampleInputEmail2">Start date</label>
+						<input type="email" class="form-control search_occup" id="exampleInputEmail2" placeholder="">
+					</div>
+					<div class="form-group col-xs-4">
+						<label for="exampleInputPassword2">End date</label>
+						<input type="password" class="form-control search_occup" id="exampleInputPassword2" placeholder="">
+					</div>
+					<div class="form-group col-xs-4">
+						<button type="button" class="btn btn-info btn-block search_occup_btn">
+						<!--	<span class="glyphicon glyphicon-search icon-flipped"></span> Search -->
+							<span class="search_icon"><img src="assets/img/search.png" alt="search" /></span> Search
+						</button>
+					</div>
+				</div>
+				<div class="row text-center last">
+					<br />
+					<span class="close-btn">
+						<img src="assets/img/close.png"/>close
+					</span>
+				</div>
+			</form>
+		</div>
+    </div><!--row-->
+<!--find a pla to stay-->
+
+<!--<div class="container-fluid">-->	
+	<div class="row letters">
+		<div class="col-xs-8 col-xs-offset-2">
+			<h2>What’s happening @ Jewgether?</h2>
+		</div>
+	</div><!--row-->
+	<div class="row letters" >
+		<div class="col-xs-3">
+			<h3>20,000</h3>
+			<div>Hosts & Guests<br /><br /></div>
+			<img src="assets/img/glyphicon-1.jpg" class="img-responsive" alt="Responsive image">
+		</div>
+		<div class="col-xs-3">
+			<h3>11,080</h3>
+			<div>Travelers around<br />the world</div>
+			<img src="assets/img/glyphicon-4.jpg" class="img-responsive" alt="Responsive image">
+		</div>
+		<div class="col-xs-3">
+			<h3>4,034</h3>
+			<div>People who want<br>to hang out</div>
+			<img src="assets/img/glyphicon-3.jpg" class="img-responsive" alt="Responsive image">
+		</div>
+		<div class="col-xs-3">
+			<h3>19,014</h3>
+			<div>Events around<br />the world</div>
+			<img src="assets/img/glyphicon-2.jpg" class="img-responsive" alt="Responsive image">
+		</div>
+	</div><!--row-->
+<!--<div class="container-fluid">-->	
+<!--New friends-->
+  	<div class="row">
+		<div class="col-xs-12 new_friends" id="new_friends">
+			<h2>New friends @ Jewgether</h2>
+            <p class="more"><a>Show more</a></p>
+
+				<div class="new_friends_list" id="new_friends_list">
+				<!--friend1 1-->
+					<div class="col-xs-1 new_friend_single" id="new_friend_list1">
+					
+						<img src="assets/img/firends/friend1.jpg" class="img-thumbnail home_event_img" alt="Upcoming events around the world">
+							<p class="new_friend_name"><a href="#">Debbie</a></p>
+							<p class="new_friend_age">Israel</p>
+					 	
+					</div>
+					
+				<!--friend1 2-->	
+					<div class="col-xs-1 new_friend_single" id="new_friend_list2">
+					
+							<img src="assets/img/firends/friend2.jpg" class="img-thumbnail home_event_img" alt="Upcoming events around the world">
+							<p class="new_friend_name"><a href="#">Aharon</a></p>
+							<p class="new_friend_age">USA</p>
+					  	
+					</div>	
+					
+				<!--friend1 3-->	
+					<div class="col-xs-1 new_friend_single" id="new_friend_list3">
+					
+							<img src="assets/img/firends/friend3.jpg" class="img-thumbnail home_event_img" alt="Upcoming events around the world">
+							<p class="new_friend_name"><a href="#">David</a></p>
+							<p class="new_friend_age">David</p>
+						  	
+					</div>
+					
+				<!--friend1 4-->	
+					<div class="col-xs-1 new_friend_single" id="new_friend_list4">
+					
+							<img src="assets/img/firends/friend1.jpg" class="img-thumbnail home_event_img" alt="Upcoming events around the world">
+							<p class="new_friend_name"><a href="#">Debbie</a></p>
+							<p class="new_friend_age">Germany</p>
+					 	
+					</div>
+					
+				<!--friend1 5-->	
+					<div class="col-xs-1 new_friend_single" id="new_friend_list5">
+					
+							<img src="assets/img/firends/friend2.jpg" class="img-thumbnail home_event_img" alt="Upcoming events around the world">
+							<div class="caption">
+								<p class="new_friend_name"><a href="#">Aharon</a></p>
+								<p class="new_friend_age">India</p>
+							</div>
+				 	
+					</div>
+					
+				<!--friend1 6-->	
+					<div class="col-xs-1 new_friend_single" id="new_friend_list6">
+					
+							<img src="assets/img/firends/friend3.jpg" class="img-thumbnail home_event_img" alt="Upcoming events around the world">
+							<div class="caption">
+								<p class="new_friend_name"><a href="#">David</a></p>
+								<p class="new_friend_age">Canada</p>
+							</div>
+						  	
+					</div>
+					
+				<!--friend1 7-->	
+					<div class="col-xs-1 new_friend_single" id="new_friend_list7">
+						
+							<img src="assets/img/firends/friend1.jpg" class="img-thumbnail home_event_img" alt="Upcoming events around the world">
+							<div class="caption">
+								<p class="new_friend_name"><a href="#">Debbie</a></p>
+								<p class="new_friend_age">Japan</p>
+							</div>
+						
+					</div>
+					
+				<!--friend1 8-->	
+					<div class="col-xs-1 new_friend_single" id="new_friend_list8">
+						
+							<img src="assets/img/firends/friend2.jpg" class="img-thumbnail home_event_img" alt="Upcoming events around the world">
+							<div class="caption">
+								<p class="new_friend_name"><a href="#">Aharon</a></p>
+								<p class="new_friend_age">USA</p>
+							</div>
+						  	
+					</div>
+					
+				<!--friend1 9-->	
+					<div class="col-xs-1 new_friend_single" id="new_friend_list9">
+						
+							<img src="assets/img/firends/friend3.jpg" class="img-thumbnail home_event_img" alt="Upcoming events around the world">
+							<div class="caption">
+								<p class="new_friend_name"><a href="#">David</a></p>
+								<p class="new_friend_age">Israel</p>
+							</div>
+						  	
+					</div>
+					
+				<!--friend1 10-->	
+					<div class="col-xs-1 new_friend_single" id="new_friend_list10">
+						
+							<img src="assets/img/firends/friend1.jpg" class="img-thumbnail home_event_img" alt="Upcoming events around the world">
+							<div class="caption">
+								<p class="new_friend_name"><a href="#">Aharon</a></p>
+								<p class="new_friend_age">Canada</p>
+							</div>
+						  	
+					</div>
+					
+				<!--friend1 11-->	
+					<div class="col-xs-1 new_friend_single" id="new_friend_list11">
+						
+							<img src="assets/img/firends/friend2.jpg" class="img-thumbnail home_event_img" alt="Upcoming events around the world">
+							<div class="caption">
+								<p class="new_friend_name"><a href="#">David</a></p>
+								<p class="new_friend_age">Israel</p>
+							</div>
+						  	
+					</div>
+					
+				<!--friend1 12-->	
+					<div class="col-xs-1 new_friend_single" id="new_friend_list12">
+						
+							<img src="assets/img/firends/friend3.jpg" class="img-thumbnail home_event_img" alt="Upcoming events around the world">
+							<div class="caption">
+								<p class="new_friend_name"><a href="#">Debbie</a></p>
+								<p class="new_friend_age">USA</p>
+							</div>
+						 	
+					</div>
+										
+				</div><!--col-xs-12 new_friends_list-->	
+					
+        </div>	
+  	</div><!--row-->   
+<!--New friends-->   
+
+
+<!--Upcoming events-->   
+		<div class="row">
+        	<div class="col-xs-12 home_events" id="home_events">
+            	<h3>Upcoming events around the world</h3>
+            	<p class="more"><a>Show more</a></p>
+					
+					<!--event1-->
+                    <div class="col-xs-2 home_events_fest" id="home_events_1">                 
+                        <div class="event_img">
+                            <img src="assets/img/home_event1.jpg" class="img-thumbnail home_event_img" alt="Upcoming events around the world">
+                        </div>
+                            <div class="home_e_dates">
+                            	<p>
+                                <strong>MARCH</strong><br/>                        	
+                                <strong><span class="event_day">24</span></strong><br/>
+                                <strong>10:30 PM</strong>
+                                </p>
+                            </div>
+            
+                            <p class="home_event_text">
+                                <a href="#">InDnegev Festival for <br/>indie music 2013</a>
+                            </p>
+                            <div class="home_event_button" id="home_event_button1">
+                                <a href="#">FESTIVAL</a>
+                            </div>
+                            <div class="home_event_place">
+                                <p>Mitzpe Ramon, Israel</p>
+                            </div>
+                    </div>
+					<!--event1-->
+                    
+					<!--event2-->
+                    <div class="col-xs-2 home_events_fest" id="home_events_2">                 
+                        <div class="event_img">
+                            <img src="assets/img/home_event2.jpg" class="img-thumbnail home_event_img" alt="Upcoming events around the world">
+                        </div>
+                            <div class="home_e_dates">
+                                <strong>APRIL</strong><br/>                        	
+                                <strong><span class="event_day">4</span></strong><br/>
+                                <strong>10:30 PM</strong>
+                            </div>
+            
+                            <p class="home_event_text">
+                                <a href="#">TOTAL BRUTAL: DIARY OF <br/> A LOST DECADE </a>
+                            </p>
+                            <div class="home_event_button" id="home_event_button2">
+                                <a href="#">ART</a>
+                            </div>
+                            <div class="home_event_place">
+                                <p>Dallas, Texas, USA</p>
+                            </div>
+                    </div>
+					<!--event2-->
+                    
+					<!--event3-->		
+                    <div class="col-xs-2 home_events_fest" id="home_events_3">                 
+                        <div class="event_img">
+                            <img src="assets/img/home_event3.jpg" class="img-thumbnail home_event_img" alt="Upcoming events around the world">
+                        </div>
+                            <div class="home_e_dates">
+                                <strong>APRIL 12</strong><br/>                        	
+                                <strong><span class="event_day">12</span></strong><br/>
+                                <strong>10:30 PM</strong>
+                            </div>
+            
+                            <p class="home_event_text">
+                                <a href="#">Duane's Bowling <br/> Tournaments <br/></a>
+                            </p>
+                            <div class="home_event_button" id="home_event_button3">
+                                <a href="#">SPORTS</a>
+                            </div>
+                            <div class="home_event_place">
+                                <p>Sydney, Australia</p>
+                            </div>
+                    </div>
+					<!--event3-->                  
+                    
+					<!--event4-->		
+                    <div class="col-xs-2 home_events_fest" id="home_events_4">                 
+                        <div class="event_img">
+                            <img src="assets/img/home_event4.jpg" class="img-thumbnail home_event_img" alt="Upcoming events around the world">
+                        </div>
+                            <div class="home_e_dates">
+                                <strong>APRIL</strong><br/>                        	
+                                <strong><span class="event_day">13</span></strong><br/>
+                                <strong>10:30 PM</strong>
+                            </div>
+            
+                            <p class="home_event_text">
+                                <a href="#">70’S Rolling Disco <br/>at Joe’s Caffe </a>
+                            </p>
+                            <div class="home_event_button" id="home_event_button4">
+                                <a href="#">PARTY</a>
+                            </div>
+                            <div class="home_event_place">
+                                <p>Chicago, Illinois, USA</p>
+                            </div>
+                    </div>
+					<!--event4-->
+                                
+					<!--event5-->					
+                    <div class="col-xs-2 home_events_fest" id="home_events_5">                 
+                        <div class="event_img">
+                            <img src="assets/img/home_event1.jpg" class="img-thumbnail home_event_img" alt="Upcoming events around the world">
+                        </div>
+                            <div class="home_e_dates">
+                                <strong>MARCH</strong><br/>                        	
+                                <strong><span class="event_day">24</span></strong><br/>
+                                <strong>10:30 PM</strong>
+                            </div>
+            
+                            <p class="home_event_text">
+                                <a href="#">InDnegev Festival for <br/>indie music 2013</a>
+                            </p>
+                            <div class="home_event_button" id="home_event_button5">
+                                <a href="">FESTIVAL</a>
+                            </div>
+                            <div class="home_event_place">
+                                <p>Mitzpe Ramon, Israel</p>
+                            </div>
+                    </div>
+					<!--event5-->
+                    
+            </div>
+    	</div><!--row-->
+<!--Upcoming events-->
+  
+ <!-- footer -->
+	<div class="row">
+    	<div class="col-xs-12 home_footer" id="home_footer">
+        	<div class="home_footer_up" id="home_footer_up">
+                <div class="col-xs-2">
+                	<ul class="list-unstyled" id="home_footer_up_left">
+                         <li><a href="#">About Us</a></li>
+                         <li class="footer_middle_list"><a href="#">Contact Jewgether</a></li>
+                         <li><a href="#">advertise Here</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-3">
+                	<ul class="list-unstyled" id="home_footer_up_center">
+                         <li><a href="#">Terms & Conditions</a></li>
+                         <li class="footer_middle_list"><a href="#">Media Coverage</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-2 col-xs-offset-5">
+                	<ul class="list-unstyled list-inline" id="home_footer_up_right">
+                         <li><a href="#"><img src="assets/img/footer_fb.png" class="footer_fb" alt="facebook"></a></li>
+                         <li><a href="#"><img src="assets/img/footer_twitter.png" class="footer_twitter" alt="twitter"></a></a></li>
+                    </ul>
+                </div>
+        	</div>
+            
+            <div class="home_footer_up" id="home_footer_bottom">
+            	<div class="col-xs-4" id="home_footer_bottom_left">
+                	<p>© Copyright 2013  All Rights Reserved to Jewgether</p>
+                </div>
+                <div class="col-xs-3 col-xs-offset-5" id="home_footer_bottom_right">
+                	<p><a>DESIGNED BY THREE BEARS</a></p>
+                </div>
+            </div>
+       </div>
+  </div>
+</div>
+<!-- footer -->
+<!--modal-->
+ <div class="modal myModal" id="myModal">
+	<div class="modal-dialog">
+      <div class="modal-content">
+      	<span class="myclose glyphicon glyphicon-remove" data-dismiss="modal" aria-hidden="true"></span>
+        <div class="modal-header text-center">          
+		<!--	<span class="glyphicon glyphicon-user"></span>-->
+			<div class="modal_prof"><img src="assets/img/modal_profile.png" alt="..."></div>
+			<div class="modal-title">
+				<strong>Welcome! Please sign up to Jewgether </strong> 
+			</div>
+        </div>
+        <div class="modal-body">
+        <span class="glyphicon glyphicon-question-sign text-muted" data-html="true" data-original-title="Family profile family profile eam screen manually the sign ups"></span>
+		<form action="" method="post">
+        	<table>
+			<tr>
+				<td width="106px"><label class="radio-label" >Profile type: <span class="green_ast">*</span></label></td>
+				<td colspan=2>  
+					<label class="">
+					  <input type="radio" name="optionsRadios" id="optionsRadios1" class="signup_radio" checked="checked" value="option1"> <span>Male</span>
+					</label>
+					<label class="radio-inline">
+					  <input type="radio" name="optionsRadios" id="optionsRadios2" class="signup_radio" value="option2"> <span>Female</span>
+					</label>
+					<label class="">
+					  <input type="radio" name="optionsRadios" id="optionsRadios3" class="signup_radio" value="option3"> <span>Family</span>
+					</label>
+				</td>		
+			  <td></td>
+			  </tr>
+			<tr>
+				  <td><label>First name: <span class="green_ast">*</span></label></td>
+				  <td colspan=2><input class="form-control" type="text" name="first_name" /></td>		
+				  <td></td>
+			</tr>
+			<tr>
+			  <td><label>Last name: <span class="green_ast">*</span></label></td>
+			  <td colspan=2><input class="form-control" type="text" name="first_name" /></td>
+			  <td></td>
+			</tr>		
+			<tr>
+			  <td><label>Email address: <span class="green_ast">*</span></label></td>
+			  <td colspan=2><input class="form-control" type="text" name="first_name" /></td>		
+			  <td></td>
+			</tr>		
+			<tr>
+			  <td><label>Password: <span class="green_ast">*</span></label></td>
+			  <td colspan=2><input class="form-control" type="text" name="first_name" /></td>		
+			  <td></td>
+			</tr>
+			<tr>
+			  <td><label>Birth Date:<span class="green_ast">*</span></label></td>
+			  <td > <a class="datemake"><img src="assets/img/data.png"></a> </td><td><input type="text" class="datepicker form-control"/></td>		
+			  <td></td>
+			</tr>
+			<tr>
+			  <td><label>Where<br/> do you live: <span class="green_ast">*</span></label></td>
+			  <td colspan=2><input class="form-control" type="text" name="first_name" /></td>		
+			  <td></td>
+			</tr>
+			<tr>
+			  <td><label>Profile picture:</label></td>
+			  <td colspan=2>
+				  <div class="fileinput fileinput-new " data-provides="fileinput">
+					  <div class="fileinput-new thumbnail" style="width: 30px; height: 30px; margin-top: 5px; margin-right: 5px; background:#d4d4d4;">
+					    <img src="assets/img/user.png" alt="user">
+					  </div>
+					  <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 50px; max-height: 50px;"></div>
+					    <span class="btn btn-sm btn-file btn-grey"><span class="fileinput-new"><strong>&nbsp;Browse&nbsp;</strong></span><span class="fileinput-exists">Change</span><input type="file" name="..."></span>
+				  </div>	
+			  </td>		
+			  <td></td>
+			</tr>
+			</table>
+			</form>
+ 			<p>* <a>Learn</a> what profile pictures are not approved<br/>
+ 			* Jewgether team screen manually the sign ups <br/>
+ 			* By clicking sign up you are agree to our <a>Terms</a></P>  
+ 			<button class="reg_signup btn btn-sm btn-ttc"> <strong>&nbsp; Sign up &nbsp;</strong></button>
+              &nbsp;&nbsp;&nbsp; <a href="#" data-dismiss="modal">Cancel</a>
+          	<p><span class="green_ast">*</span> required fields</p>	 
+        </div>
+      </div>
+    </div>
+ </div>
+<!--modal-->
+<!--modal-->
+ <div class="modal myModal" id="myModal2">
+	<div class="modal-dialog">
+      <div class="modal-content">
+      	<span class="myclose glyphicon glyphicon-remove" data-dismiss="modal" aria-hidden="true"></span>
+        <div class="modal-header text-center">          
+          <img src="assets/img/login-header.png" />
+        </div>
+        <div class="modal-body">
+        	<table>
+			<tr>
+			  <td colspan=3>  
+			 	<span class="login_fb_offer"> Do you have an account in facebook?</span>
+			  </td>
+			</tr>
+			<tr>
+				<td colspan=3>
+					<a href="#"><div id="login_fb" class="login_fb"></div></a>
+				</td>		
+			</tr>
+			<tr>
+			  <td colspan=3><img src="assets/img/or.png"></td>
+			</tr>		
+			<tr>
+			  <td><span class="login_fb_offer">Log in</span></td>
+			</tr>		
+			<tr>
+			  <td colspan=3><input id="email" class="form-control" type="email" name="first_name" placeholder=" Email address"/></td>
+			</tr>
+			<tr>
+			  <td colspan=3><p><input id="password" class="form-control" type="password" name="first_name" placeholder=" Password"/></p></td>	
+			</tr>
+			<tr>
+			  <td colspan=2>
+			  	<label class="checkbox-inline">
+				  <input type="checkbox" name="login_remember_me" id="login_remember_me" class="remember_me" value="option1"> Remember me
+				</label>
+			  </td>		
+			  <td class="text-right"><br /><a href="#" >Forgot your password? </a></td>
+			</tr>
+			</table><br />
+ 			<button class="btn btn-sm btn-ttc"> <strong>&nbsp; Log In &nbsp;</strong></button>
+              &nbsp;&nbsp;&nbsp; <a href="#" data-dismiss="modal">Cancel</a>        	 
+        </div>
+		<div class="modal-footer text-center">          
+			<div class="login-bottom-part text-center">
+				<div>Don’t have an account yet?</div>
+				<div><a href="#">Sign up Now!</a></div>
+          	</div>  
+        </div>
+      </div>
+    </div>
+ </div>
+<!--modal-->
+</body>
+</html>

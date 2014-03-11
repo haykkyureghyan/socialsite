@@ -1,0 +1,20 @@
+@charset "utf-8";
+/* CSS Document */
+.find-style{
+background: rgb(32, 113, 174);
+color: rgb(116, 181, 223);
+}
+.find-style h1{	
+color: rgb(231,244,255);
+}
+.last {
+padding-top: 20px;
+height: 50px;
+}
+.last > a{
+color: rgb(44,177,243);
+text-decoration: underline;
+}
+.find-style button{	
+margin-top: 25px;
+}
